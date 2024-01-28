@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--& ///////////////////  Google fonts  ############# -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!--& ///////////////////  Font Awsome  ############# -->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!--& ///////////////////  Bootstrap  //////////////////// -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!--& ///////////////////  File Css  ///////////////////// -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Bookmarker</title>
+    <!--& /////////////////// Titlle Icon   //////////////////// -->
+    <link rel="icon" type="image/jpeg" href="images/mark.png" />
+  </head>
+  <body>
+
+    <h1 class="text-center text-white pt-5 pb-2">Bookmarker.</h1>
+    <hr class="text-white">
+
+    <h2 class="text-center text-white"><i class="fa-solid fa-bookmark me-2"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark ms-2"></i></h2>
+
+    <section>
+      <div class="w-75 m-auto">
+        <label for="siteName" class="text-white"><i class="fa-solid fa-book-bookmark text-white me-2"></i>Site Name :</label>
+        <input type="text" id="siteName" class="form-control my-2 " oninput="vaildName()">
+        <div class="alert alert-danger d-none" id="name-alert"><h3>Sorry.., write the name correctly.</h3></div>
+
+        <label for="siteUrl" class="text-white mt-3"> <i class="fa-solid fa-link me-2"></i>Site Url :</label>
+        <input type="text" id="siteUrl" class="form-control my-2 " oninput=" vaildUrl()">
+        <div class="alert alert-danger d-none" id="url-alert"><h3>Sorry.., Enter Valid Url.</h3></div>
+        <button class="btn btn-warning w-100 mt-3 " id="Submit" onclick="sitesBook()">Submit</button>
+        <!-- update -->
+        <button class="btn btn-warning w-100 mt-3 d-none  " id="update" onclick="updateData()">Update</button>
+
+
+        <label for="siteUrl" class="text-white mt-3"> <i class="fa-solid fa-link me-2"></i>Search :</label>
+        <input onkeyup="search()" type="text" id="wantItem" class="form-control my-2 ">
+
+        <div>
+          <table class="table mt-4 text-center " >
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+                <th>Update</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+             
+      
+
+            </tbody>
+          </table>
+        </div>
+
+        <div class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none" id="alert">
+          <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+            <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+              <div class="circles d-flex">
+                <span class=" me-2"><i class="fa-solid fa-circle"></i></span>
+                <span class=" me-2"><i class="fa-solid fa-circle"></i></span>
+                <span class=" me-2"><i class="fa-solid fa-circle"></i></span>
+              </div>
+              <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
+            </header>
+            <p class="m-0 pb-2">
+              Site Name or Url is not valid, Please follow the rules below :
+            </p>
+            <ol class="rules list-unstyled m-0">
+              <li>
+                <i class="fa-regular fa-circle-right p-2"></i>Site name must
+                contain at least 3 characters
+              </li>
+              <li>
+                <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+                valid one
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--* //////////////// Java Script File /////////////////// -->
+    <script src="js/main.js"></script>
+    <!--* //////////////// Java bundle File /////////////////// -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+/* *######### General Styles ##########*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:"cairo" ;
+  background-image:linear-gradient(rgba(27, 25, 27, 0.5) 5% 10%), url(../images/pexels-pixabay-235985.jpg);
+  min-height: 100vh;
+}
+
+h1,
+h4,
+h5,
+h6 {
+  font-family:'Pacifico', cursive ;
+  font-size: 45px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+p {
+  margin: 0;
+}
